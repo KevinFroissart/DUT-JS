@@ -1,0 +1,95 @@
+/* .searchResults:before,
+.sidebar:before {
+	content: '';
+	background: hsl(203, 7%, 78%);
+	background: #eaeaea;
+	background: #fff;
+	box-shadow: 0 0px 2px rgba(0,0,0,.1);
+	border-radius: 3px;
+	position: absolute;
+	z-index: -1;
+	top: 20px;
+	right: 20px;
+	bottom: 20px;
+	left: 20px;
+}
+
+.sidebar:before {
+	background: #ccc;
+	background: hsl(200, 18%, 16%);
+	background: hsl(200, 18%, 86%);
+	background: #e0e2e3;
+	box-shadow: none;
+} */
+.sidebar {
+	width: 360px;
+	overflow: hidden;
+	padding: 40px;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+}
+
+.slideshow {
+	overflow: hidden;
+}
+.slideshow a {
+	display: block;
+}
+.slideshow a img {
+	width: 100%;
+	height: 150px;
+}
+.slideshow.single a:not(:first-child) {
+	display: none;
+}
+
+@media (max-width: 1190px){
+	.sidebar {
+		width: 240px;
+		padding: 20px;
+	}
+	.slideshow a img {
+		height: 120px;
+	}
+}
+
+.liveSearch ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.liveSearch {
+	margin-top: 35px;
+}
+.sidebar h2,
+.liveSearch ul:before {
+	font-weight: 400;
+	font-size: 18px;
+	color: #fff;
+	margin-bottom: 15px;
+}
+
+.liveSearch ul:before {
+	content: 'Les recherches live :';
+	display: block;
+}
+.liveSearch li {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: baseline;
+}
+.liveSearch li time {
+	opacity: .5;
+	font-size: 9px;
+}
+.liveSearchRenderer {
+	font-size: 14px;
+}
+.liveSearchRenderer.isMe:after {
+	content: '(moi)';
+	text-decoration: none;
+	font-size: 11px;
+	opacity: .4;
+}

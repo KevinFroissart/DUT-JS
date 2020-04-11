@@ -1,0 +1,83 @@
+@font-face {
+	font-family: Bebas;
+	src: url("./fonts/bebas-neue.ttf");
+}
+
+* {
+	box-sizing: border-box;
+}
+html,
+body {
+	margin: 0;
+	/* height: 100%; */
+	padding: 0;
+}
+body {
+	background: #181818;
+	color: white;
+	font-size: 12px;
+	font-family: 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding-top: 58px;
+}
+a {
+	color: #ca2e25;
+}
+a:hover {
+	color: #e4746e;
+}
+body > footer {
+	background: #161616;
+	border-top: 1px solid #000;
+	width: 100%;
+	padding: 50px;
+	color: #fff8;
+}
+@keyframes fadeIn{
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+@keyframes slideUp{
+	from { transform: translateY(20px); }
+	to { transform: translateY(0); }
+}
+@keyframes zoomOut{
+	from { transform: scale(.7); }
+	to { transform: scale(1); }
+}
+body > section {
+	width: 100%;
+	padding: 50px;
+	font-size: 20px;
+	font-weight: 300;
+	display: none;
+}
+
+.slideshowContainer .slideshow {
+	width: 400px;
+	height: 250px;
+	margin-bottom: 15px;
+}
+.slideshowContainer .slideshow a,
+.slideshowContainer .slideshow a img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.slideshowContainer button {
+	border: none;
+	background: #ca2e25;
+	color: white;
+	border-radius:  3px;
+	padding: 15px 25px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: all .2s ease;
+}
+.slideshowContainer button:hover {
+	background: #ca2e25bb;
+}
+
